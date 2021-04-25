@@ -1,25 +1,28 @@
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+// import UseEffectHook from "./UseEffectHook";
+import UseMemoHook from "./UseMemoHook";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	// const [count, setCount] = useState(4);
+	const [count, setCount] = useState(() => {
+		console.log("state console.log is running");
+		return 4;
+	});
+
+	const handleCount = () => {
+		// setCount(count + 1); this will not work
+		// setCount(count + 1); it will only does the increment of 1
+		setCount((prevCount) => prevCount + 1);
+		setCount((prevCount) => prevCount + 1);
+	};
+	return (
+		<div>
+			{/* <UseEffectHook /> */}
+			<UseMemoHook />
+			<button onClick={handleCount}>Increment count</button>
+			<div>{count}</div>
+		</div>
+	);
 }
 
 export default App;
