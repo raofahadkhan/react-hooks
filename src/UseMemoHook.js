@@ -43,3 +43,5 @@ function UseMemoHook() {
 }
 
 export default UseMemoHook;
+
+// useMemo returns a memoized value
