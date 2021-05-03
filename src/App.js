@@ -1,9 +1,10 @@
 import React from "react";
-import CustomHook from "./CustomHook";
-import UseCallbackHook from "./UseCallbackHook";
+// import CustomHook from "./CustomHook";
+// import UseCallbackHook from "./UseCallbackHook";
 // import UseEffectHook from "./UseEffectHook";
 // import UseMemoHook from "./UseMemoHook";
 // import Example from "./example";
+import UseReducerHook from "./UseReducerHook";
 
 function App() {
 	return (
@@ -12,7 +13,8 @@ function App() {
 			{/* <UseMemoHook /> */}
 			{/* <Example /> */}
 			{/* <UseCallbackHook /> */}
-			<CustomHook />
+			{/* <CustomHook /> */}
+			<UseReducerHook />
 		</div>
 	);
 }
